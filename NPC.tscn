@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://cuqff6rt1i32j"]
+
+[ext_resource type="Script" uid="uid://c1xx0asxopsqv" path="res://npc.gd" id="1_ll5ud"]
+[ext_resource type="Texture2D" uid="uid://caoso1yjfscid" path="res://assets/sprites/npc/wiesniak.png" id="1_twre2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_twre2"]
+size = Vector2(64, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ll5ud"]
+size = Vector2(64, 64)
+
+[node name="Npc" type="CharacterBody2D"]
+script = ExtResource("1_ll5ud")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_twre2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_twre2")
+debug_color = Color(0.5059942, 0.5561519, 0.46188927, 0.41960785)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_ll5ud")
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
