@@ -1,0 +1,21 @@
+[gd_resource type="TileSet" load_steps=5 format=3 uid="uid://dlifeo5kna7la"]
+
+[ext_resource type="Texture2D" uid="uid://1f6spo2hlu4e" path="res://assets/sprites/tiles/stone_placeholder.png" id="1_ujgj0"]
+[ext_resource type="Texture2D" uid="uid://d0r2qis0v42pw" path="res://assets/sprites/tiles/grass_placeholder.png" id="2_02c43"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_peyie"]
+texture = ExtResource("1_ujgj0")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x7jcc"]
+texture = ExtResource("2_02c43")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[resource]
+tile_size = Vector2i(64, 64)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_peyie")
+sources/1 = SubResource("TileSetAtlasSource_x7jcc")

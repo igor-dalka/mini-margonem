@@ -6,4 +6,4 @@
 position = Vector2(0, -2)
 
 [node name="Map" parent="." instance=ExtResource("1_ig7tw")]
-position = Vector2(110, 114)
+position = Vector2(320, 322)
